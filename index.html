@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation Website</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="page1" class="page">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas nemo
+        amet quaerat quis. Totam debitis natus asperiores eius fugit.
+      </p>
+      <div class="buttons">
+        <a href="#page2" class="btn btn-dark">
+          <i class="fas fa-arrow-circle-down"></i> Next Page
+        </a>
+      </div>
+    </div>
+    <div id="page2" class="page">
+      <h1>Page 2</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas nemo
+        amet quaerat quis. Totam debitis natus asperiores eius fugit.
+      </p>
+      <div class="buttons">
+        <a href="#page1" class="btn btn-light">
+          <i class="fas fa-arrow-circle-up"></i> Prev Page
+        </a>
+        <a href="#page3" class="btn btn-dark">
+          <i class="fas fa-arrow-circle-down"></i> Next Page
+        </a>
+      </div>
+    </div>
+    <div id="page3" class="page">
+      <h1>Page 3</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas nemo
+        amet quaerat quis. Totam debitis natus asperiores eius fugit.
+      </p>
+      <div class="buttons">
+        <a href="#page2" class="btn btn-light">
+          <i class="fas fa-arrow-circle-up"></i> Prev Page
+        </a>
+        <a href="#page4" class="btn btn-dark">
+          <i class="fas fa-arrow-circle-down"></i> Next Page
+        </a>
+      </div>
+    </div>
+    <div id="page4" class="page">
+      <h1>Page 4</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas nemo
+        amet quaerat quis. Totam debitis natus asperiores eius fugit.
+      </p>
+      <div class="buttons">
+        <a href="#page3" class="btn btn-light">
+          <i class="fas fa-arrow-circle-up"></i> Prev Page
+        </a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Smooth Scrolling
+      $('.btn').on('click', function (event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

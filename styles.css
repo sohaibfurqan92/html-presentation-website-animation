@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  height: 100vh;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+.page h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.btn-dark {
+  background: #333;
+}
+
+#page1 {
+  background: cornflowerblue;
+}
+#page2 {
+  background: tan;
+}
+#page3 {
+  background: teal;
+}
+#page4 {
+  background: lightcoral;
+}
+
+/* page Animations */
+#page1 h1 {
+  transform: translateY(-1200px);
+  animation: heading 2s forwards ease-in;
+  animation-delay: 1s;
+}
+
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+#page1 p {
+  transform: translateX(-1200px);
+  animation: para 2s forwards ease-in-out;
+}
+
+@keyframes para {
+  to {
+    transform: translateX(0);
+  }
+}
